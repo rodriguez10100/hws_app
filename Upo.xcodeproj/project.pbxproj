@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		706631A12716712A00342559 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706631A02716712A00342559 /* DataController.swift */; };
+		70C4789D274B1C6500E667D4 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C4789C274B1C6500E667D4 /* ExternalAccessory.framework */; };
+		70CD16D92706594C00DE6ADE /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70CD16D72706594C00DE6ADE /* Main.xcdatamodeld */; };
 		70D54AC12704051100D09ED9 /* UpoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D54AC02704051100D09ED9 /* UpoApp.swift */; };
 		70D54AC32704051100D09ED9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D54AC22704051100D09ED9 /* ContentView.swift */; };
 		70D54AC52704051300D09ED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70D54AC42704051300D09ED9 /* Assets.xcassets */; };
@@ -14,6 +17,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		706631A02716712A00342559 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		70C4789A274B1C6500E667D4 /* Upo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Upo.entitlements; sourceTree = "<group>"; };
+		70C4789C274B1C6500E667D4 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		70C4789E274B1CA700E667D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		70CD16D82706594C00DE6ADE /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		70D54ABD2704051100D09ED9 /* Upo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Upo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70D54AC02704051100D09ED9 /* UpoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpoApp.swift; sourceTree = "<group>"; };
 		70D54AC22704051100D09ED9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,17 +34,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70C4789D274B1C6500E667D4 /* ExternalAccessory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70C4789B274B1C6500E667D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70C4789C274B1C6500E667D4 /* ExternalAccessory.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		70D54AB42704051000D09ED9 = {
 			isa = PBXGroup;
 			children = (
 				70D54ABF2704051100D09ED9 /* Upo */,
 				70D54ABE2704051100D09ED9 /* Products */,
+				70C4789B274B1C6500E667D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,8 +69,12 @@
 		70D54ABF2704051100D09ED9 /* Upo */ = {
 			isa = PBXGroup;
 			children = (
+				70C4789E274B1CA700E667D4 /* Info.plist */,
+				70C4789A274B1C6500E667D4 /* Upo.entitlements */,
 				70D54AC02704051100D09ED9 /* UpoApp.swift */,
 				70D54AC22704051100D09ED9 /* ContentView.swift */,
+				70CD16D72706594C00DE6ADE /* Main.xcdatamodeld */,
+				706631A02716712A00342559 /* DataController.swift */,
 				70D54AC42704051300D09ED9 /* Assets.xcassets */,
 				70D54AC62704051300D09ED9 /* Preview Content */,
 			);
@@ -137,6 +159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70CD16D92706594C00DE6ADE /* Main.xcdatamodeld in Sources */,
+				706631A12716712A00342559 /* DataController.swift in Sources */,
 				70D54AC32704051100D09ED9 /* ContentView.swift in Sources */,
 				70D54AC12704051100D09ED9 /* UpoApp.swift in Sources */,
 			);
@@ -266,12 +290,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Upo/Upo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Upo/Preview Content\"";
-				DEVELOPMENT_TEAM = PQU74YXU83;
+				DEVELOPMENT_TEAM = WY4B9BN5LR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Upo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -296,12 +322,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Upo/Upo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Upo/Preview Content\"";
-				DEVELOPMENT_TEAM = PQU74YXU83;
+				DEVELOPMENT_TEAM = WY4B9BN5LR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Upo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -343,6 +371,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		70CD16D72706594C00DE6ADE /* Main.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				70CD16D82706594C00DE6ADE /* Main.xcdatamodel */,
+			);
+			currentVersion = 70CD16D82706594C00DE6ADE /* Main.xcdatamodel */;
+			path = Main.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 70D54AB52704051000D09ED9 /* Project object */;
 }
